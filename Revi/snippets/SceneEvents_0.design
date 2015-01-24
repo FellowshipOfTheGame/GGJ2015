@@ -6,33 +6,14 @@
                 <set-game-val-0 comment="false" x="26" y="40">
                     <int id="0" val="0"/>
                 </set-game-val-0>
+                <set-game-val-1 comment="false" x="26" y="60">
+                    <int id="0" val="0"/>
+                </set-game-val-1>
+                <set-game-val-2 comment="false" x="26" y="80">
+                    <int id="0" val="0"/>
+                </set-game-val-2>
             </group>
         </init>
-    </group>
-    <group eventID="1" id="1">
-        <set-xy comment="false" x="63" y="228">
-            <ACTOR eid="2" id="0"/>
-            <int id="1" val="0"/>
-            <screen-xy comment="false" id="2" x="0" y="0">
-                <int id="0" val="2"/>
-            </screen-xy>
-        </set-xy>
-        <set-xy comment="false" x="63" y="268">
-            <ACTOR eid="2" id="0"/>
-            <int id="1" val="1"/>
-            <minus comment="false" id="2" x="0" y="0">
-                <times comment="false" id="0" x="0" y="0">
-                    <screen-xy comment="false" id="0" x="0" y="0">
-                        <int id="0" val="3"/>
-                    </screen-xy>
-                    <int id="1" val="2"/>
-                </times>
-                <get-wh comment="false" id="1" x="0" y="0">
-                    <ACTOR eid="2" id="0"/>
-                    <int id="1" val="1"/>
-                </get-wh>
-            </minus>
-        </set-xy>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="3" id="0">

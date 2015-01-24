@@ -82,7 +82,7 @@
     <attributes>
         <number cid="0" id="1" name="SceneController" save="true" value="0.0"/>
         <number cid="-1" id="0" name="Scene" save="true" value="0.0"/>
-        <number cid="0" id="2" name="Inventory" save="true" value="0"/>
+        <number cid="0" id="2" name="Inventory" save="true" value="0.0"/>
     </attributes>
     <collisions>
         <poly id="1" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>
