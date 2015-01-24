@@ -3,8 +3,8 @@
     <exts>
         <e enabled="false" id="test-native"/>
         <e enabled="false" id="test"/>
-        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="label"/>
+        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="tileapi"/>
     </exts>
     <scales>
@@ -74,9 +74,9 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="0" id="1" name="SceneController" save="true" value="0"/>
-        <number cid="-1" id="2" name="asd" save="true" value="0"/>
-        <number cid="-1" id="0" name="Scene" save="true" value="0"/>
+        <number cid="0" id="1" name="SceneController" save="true" value="0.0"/>
+        <number cid="-1" id="2" name="asd" save="true" value="0.0"/>
+        <number cid="-1" id="0" name="Scene" save="true" value="0.0"/>
     </attributes>
     <collisions>
         <poly id="1" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>
