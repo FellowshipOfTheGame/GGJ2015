@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <tileset across="3" atlasID="0" desc="" down="1" id="5" name="BackgroundItens" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="2" id="2" order="-1"/>
+    </tileset>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="false" fric="0.2" gid="3" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Enemy" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
+        <snippets>
+            <s enabled="true" id="11">
+                <prop id="2" list="0" val="0"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="64" id="9" name="Enemy" shared="false" width="32">
+        <anim across="2" down="1" durations="100,100" height="64" id="0" loop="true" name="walk" numframes="2" originx="0" originy="0" sync="false" version="2" width="64">
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <tileset across="18" atlasID="0" desc="" down="2" id="4" name="Font" oid="-1" shared="false" th="32" tw="32">
         <tile collision="1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -45,6 +63,11 @@
         <snippets>
             <s enabled="true" id="1">
                 <prop id="1" list="0" val="30"/>
+                <prop id="2" list="0" val="walkR"/>
+                <prop id="3" list="0" val="walkL"/>
+                <prop id="4" list="0" val="walkU"/>
+                <prop id="5" list="0" val="walkD"/>
+                <prop id="6" list="0" val="walkD"/>
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="4">
@@ -54,12 +77,18 @@
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="128" id="1" name="Zeh" shared="false" width="84">
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="256" id="0" loop="true" name="walkR" numframes="6" originx="0" originy="0" sync="false" version="2" width="252">
-            <poly data="4,0,0,84,0,84,128,0,128" density="0.1" fric="0.2" gid="-1000" id="0" name="walkR" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="3" defaultAnimation="3" desc="" height="64" id="1" name="Zeh" shared="false" width="32">
+        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="walkR" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
+            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkR" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="256" id="1" loop="true" name="walkL" numframes="6" originx="0" originy="0" sync="false" version="2" width="252">
-            <poly data="4,0,0,84,0,84,128,0,128" density="0.1" fric="0.2" gid="-1000" id="0" name="walkR" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="walkL" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
+            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkL" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="64" id="2" loop="true" name="walkU" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
+            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkU" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="64" id="3" loop="true" name="walkD" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
+            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkD" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
 </pack>

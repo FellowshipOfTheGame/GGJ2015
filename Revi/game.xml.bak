@@ -3,8 +3,8 @@
     <exts>
         <e enabled="false" id="test-native"/>
         <e enabled="false" id="test"/>
-        <e enabled="false" id="label"/>
         <e enabled="false" id="test-flash"/>
+        <e enabled="false" id="label"/>
         <e enabled="false" id="tileapi"/>
     </exts>
     <scales>
@@ -65,12 +65,19 @@
         <key id="4" keyname="Z" name="action1" vk="90" vks="90"/>
         <key id="5" keyname="X" name="action2" vk="88" vks="88"/>
         <key id="6" keyname="ENTER" name="enter" vk="10" vks="10"/>
+        <key id="7" keyname="I" name="Inventory" vk="73" vks="73"/>
+        <key id="8" keyname="A" name="Key 1" vk="65" vks="65"/>
     </input>
     <attcats>
+        <cat id="0" name="Controller"/>
         <cat id="-1" name="Default"/>
     </attcats>
     <props/>
-    <attributes/>
+    <attributes>
+        <number cid="0" id="1" name="SceneController" save="true" value="0"/>
+        <number cid="-1" id="2" name="asd" save="true" value="0"/>
+        <number cid="-1" id="0" name="Scene" save="true" value="0"/>
+    </attributes>
     <collisions>
         <poly id="1" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>
         <poly id="2" name="Rect Up" pts="0.0,0.0#0.0,0.5#1.0,0.5#1.0,0.0"/>
@@ -99,7 +106,7 @@
         <poly id="24" name="Tri 60-2R Inv" pts="0.0,0.0#0.5,1.0#1.0,1.0#1.0,0.0"/>
     </collisions>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,4," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,4,5,8," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
