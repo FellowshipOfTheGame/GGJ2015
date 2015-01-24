@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1"/>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <int id="1" val=""/>
+                    </less>
+                </if>
+                <camera-follow comment="false" x="26" y="110">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </camera-follow>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="1">
+        <camera-move comment="false" x="28" y="152">
+            <int id="0" val=""/>
+            <get-xy comment="false" id="1" x="0" y="0">
+                <ACTOR eid="this" id="0"/>
+                <int id="1" val="1"/>
+            </get-xy>
+        </camera-move>
+    </group>
+    <group eventID="1" id="-1">
+        <scene-wh comment="false" x="370" y="420">
+            <int id="0" val="0"/>
+        </scene-wh>
+    </group>
+</groups>

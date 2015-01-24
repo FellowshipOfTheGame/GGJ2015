@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="2" y="97">
+            <group eventID="-1" id="-1">
+                <camera-move comment="false" x="13" y="122">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <scene-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </scene-wh>
+                        <get-val-5-3 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                    <plus comment="false" id="1" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <get-val-5-2 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </camera-move>
+                <incdec comment="false" x="13" y="160">
+                    <int id="0" val="3"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="3"/>
+                </incdec>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-5-3 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-5-3>
+                <camera-follow comment="false" x="26" y="60">
+                    <ACTOR eid="this" id="0"/>
+                </camera-follow>
+                <camera-move comment="true" x="26" y="87">
+                    <plus comment="true" id="0" x="0" y="0">
+                        <get-xy comment="true" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <get-val-5-1 comment="true" id="1" x="0" y="0"/>
+                    </plus>
+                    <plus comment="true" id="1" x="0" y="0">
+                        <get-xy comment="true" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <get-val-5-2 comment="true" id="1" x="0" y="0"/>
+                    </plus>
+                </camera-move>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
