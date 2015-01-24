@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="15" fixedrot="false" fric="0.2" gid="3" id="13" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="ActiveItem" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="14" static="false">
-        <snippets/>
-    </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="14" name="ActiveItem" shared="false" width="16"/>
     <tileset across="3" atlasID="0" desc="" down="1" id="5" name="BackgroundItens" oid="-1" shared="false" th="32" tw="32">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="1" id="1" order="-1"/>
@@ -66,12 +62,23 @@
     </tileset>
     <background atlasID="0" desc="" durations="1000,2000" dx="-0.0" dy="-0.0" height="600" id="10" name="GameOverBG" numframes="2" oid="-1" repeats="false" resized="false" shared="false" width="800" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="3" id="11" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="InventoryBar" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="12" static="true">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="16">
+                <prop id="1" list="0" val="EEB"/>
+                <prop id="2" list="0" val="BEE"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="15">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="12" name="InventoryBar" shared="false" width="800">
-        <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="barra" numframes="1" originx="0" originy="0" sync="false" version="2" width="800">
-            <poly data="4,0,0,800,0,800,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
+    <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="600" id="12" name="InventoryBar" shared="false" width="800">
+        <anim across="1" down="1" durations="100" height="600" id="1" loop="true" name="BEE" numframes="1" originx="0" originy="0" sync="false" version="2" width="800"/>
+        <anim across="1" down="1" durations="100" height="600" id="2" loop="true" name="EEB" numframes="1" originx="0" originy="0" sync="false" version="2" width="800"/>
+        <anim across="1" down="1" durations="100" height="600" id="3" loop="true" name="BCE" numframes="1" originx="0" originy="0" sync="false" version="2" width="800"/>
+        <anim across="1" down="1" durations="100" height="600" id="4" loop="true" name="BEC" numframes="1" originx="0" originy="0" sync="false" version="2" width="800"/>
+        <anim across="1" down="1" durations="100" height="600" id="5" loop="true" name="ECB" numframes="1" originx="0" originy="0" sync="false" version="2" width="800"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="0" fixedrot="true" fric="0.2" gid="0" id="0" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="Zeh" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="1" static="false">
         <snippets>
@@ -99,11 +106,11 @@
         <anim across="1" down="1" durations="100" height="64" id="1" loop="true" name="walkL" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
             <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkL" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="64" id="2" loop="true" name="walkU" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
-            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkU" rest="0.0" sensor="false"/>
-        </anim>
         <anim across="1" down="1" durations="100" height="64" id="3" loop="true" name="walkD" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
-            <poly data="4,1,7,31,7,31,57,1,57" density="0.1" fric="0.2" gid="-1000" id="0" name="walkD" rest="0.0" sensor="false"/>
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walkD" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="64" id="4" loop="true" name="walkU" numframes="1" originx="0" originy="0" sync="false" version="2" width="32">
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walkU" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
 </pack>
