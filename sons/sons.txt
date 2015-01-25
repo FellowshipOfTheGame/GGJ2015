@@ -1,0 +1,23 @@
+01 - explosão - 11" - ok
+
+02 - porta abrindo - 7" - ok
+
+03 - rio - 27" - ok
+
+04 - cajado - 1" - ok
+
+05 - bazuca - 2" - ok
+
+06 - dano - 2" - ok
+
+07 - trocar inventário-mão - 1" - ok
+
+08 - tropeçar - 2" - ok
+
+09 - boss - 2" - ok
+
+10 - despertador - 9" - ok
+
+your presence
+give me some sugar
+oh yeah
