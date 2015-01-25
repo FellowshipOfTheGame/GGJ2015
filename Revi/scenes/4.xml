@@ -6,14 +6,14 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="200" id="0" name="Stone" pts="4,-46.5,100.0,46.5,100.0,46.5,-100.0,-46.5,-100.0" r="64" type="box" w="92" x="-2" y="0"/>
-        <region b="64" g="64" h="295" id="1" name="rio" pts="4,91.0,0.0,91.0,295.0,0.0,295.0,0.0,0.0" r="64" type="box" w="91" x="718" y="-11"/>
+        <region b="64" g="64" h="200" id="0" name="Stone" pts="4,-46.5,-100.0,46.5,-100.0,46.5,100.0,-46.5,100.0" r="64" type="box" w="92" x="-2" y="0"/>
+        <region b="64" g="64" h="295" id="1" name="rio" pts="4,0.0,0.0,0.0,295.0,91.0,295.0,91.0,0.0" r="64" type="box" w="91" x="718" y="-11"/>
     </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="0" id="0" name="Zeh 1" sx="1.0" sy="1.0" x="370" y="79" z="0"/>
         <actor a="0.0" aid="2" c="false" group="3" id="11" name="InventoryBar 2" sx="1.0" sy="1.0" x="0" y="0" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="17" name="TextArea 3" sx="1.0" sy="1.0" x="0" y="250" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="-2" id="17" name="TextArea 3" sx="1.0" sy="1.0" x="0" y="250" z="0"/>
     </actors>
     <snippets/>
     <terrain/>
