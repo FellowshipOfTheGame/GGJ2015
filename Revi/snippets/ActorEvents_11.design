@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
+    <group eventID="2" id="0">
         <event-key-press-release comment="false" x="15" y="15">
-            <group eventID="1" id="-1"/>
-            <CONTROL eid="7" id="0"/>
+            <group eventID="2" id="-1">
+                <dolater comment="false" x="26" y="42">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="69">
+                            <group eventID="2" id="-1">
+                                <setanim comment="false" x="48" y="99">
+                                    <ACTOR eid="this" id="0"/>
+                                    <string-to-anim comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="EBK"/>
+                                    </string-to-anim>
+                                </setanim>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="6"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <int id="0" val=".1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <CONTROL eid="4" id="0"/>
             <int id="1" val="0"/>
         </event-key-press-release>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="2" id="-1"/>
 </groups>

@@ -71,16 +71,82 @@ import com.stencyl.graphics.shaders.BloomShader;
 class SceneEvents_4 extends SceneScript
 {          	
 	
+public var _Encantado:Bool;
+
  
  	public function new(dummy:Int, engine:Engine)
 	{
 		super(engine);
-		
+		nameMap.set("Encantado", "_Encantado");
+_Encantado = false;
+
 	}
 	
 	override public function init()
 	{
-		
+		    
+/* ======================== When Creating ========================= */
+        _Encantado = false;
+propertyChanged("_Encantado", _Encantado);
+        setGameAttribute("SceneController", 3);
+        setGameAttribute("Inventory", 3);
+        getActor(2).setAnimation("" + "BEC");
+        stopAllSounds();
+        loopSound(getSound(19));
+    
+/* =========================== Keyboard =========================== */
+addKeyStateListener("action1", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+{
+if(wrapper.enabled && pressed)
+{
+        if(isInRegion(getActor(1), getRegion(0)))
+{
+            if((getGameAttribute("Inventory") == 3))
+{
+                setGameAttribute("String", "Now your staff is glowing");
+                setGameAttribute("Inventory", 6);
+}
+
+            else
+{
+                setGameAttribute("String", "1 - You shall ... 2 - You shall not ... 3 - You shall not ...");
+}
+
+}
+
+        else if(isInRegion(getActor(1), getRegion(1)))
+{
+            if((getGameAttribute("Inventory") == 6))
+{
+                setGameAttribute("String", "The river is opening");
+}
+
+            else
+{
+                setGameAttribute("String", "A flowing river ...");
+}
+
+}
+
+}
+});
+    
+/* =========================== Keyboard =========================== */
+addKeyStateListener("action1", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+{
+if(wrapper.enabled && pressed)
+{
+        if(((getGameAttribute("Inventory") == 7) || (getGameAttribute("Inventory") == 4)))
+{
+            setGameAttribute("String", "You tried to swim in the river with your bazooka ...");
+            runLater(1000 * 1, function(timeTask:TimedTask):Void {
+                        switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(2, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
+}, null);
+}
+
+}
+});
+
 	}	      	
 	
 	override public function forwardMessage(msg:String)

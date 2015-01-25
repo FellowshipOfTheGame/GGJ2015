@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<game accelFramerate="0" adsPosition="0" aheight="600" airCert="" airPass="" androidAlias="" androidCert="" androidMinVersion="0" androidPassword="" androidPublicKey="" androidTargetVersion="7" antialias="true" appName="My Game" appType="0" atlasBindingDefault="true" author="" authorURL="" autoRotate="false" awidth="800" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" bindAllAtlasesDefault="true" borderColor="-12303292" borderThickness="2" bundleID="com.yourname.gamename" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="0" defaultFramerate="60" defaultSceneID="0" desc="" desktopScale="1x" desktopScaleMode="1" deviceOS="4.3" disableBackButton="false" enableGPG="false" enablePurchases="false" engine="0" format="3.2.0" gameid="-1" googleAppID="" haxeExtras="" height="600" internalVersion="1" internalVersionIOS="1" kit="false" lockURL="" macBundleID="" maxScaleAndroid="4x" maxScaleDesktop="4x" maxScaleIOS="4x" maxScaleWeb="4x" metroColor="-12566464" mochi="" multitouch="true" name="Revi" ngID="" ngKey="" orientation="0" p12="" p12pwd="" physicsMode="0" pixelsnap="false" preloaderstyle="0" products="" prov-adhoc="" prov-store="" scale="1" scaleModeAndroid="0" scaleModeDesktop="0" scaleModeIOS="0" scaleModeWeb="0" showAds="false" simulatorOS="4.3" splashStyle="0" startInFullScreenDesktop="false" startInFullScreenWeb="false" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" useGlossyIcon="false" webScale="1x" whirlKey="" width="800" windowsAppName="" windowsAuthor="" windowsBundleID="">
+<game accelFramerate="0" adsPosition="0" aheight="600" airCert="" airPass="" androidAlias="" androidCert="" androidMinVersion="0" androidPassword="" androidPublicKey="" androidTargetVersion="7" antialias="true" appName="My Game" appType="0" atlasBindingDefault="true" author="" authorURL="" autoRotate="false" awidth="800" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" bindAllAtlasesDefault="true" borderColor="-12303292" borderThickness="2" bundleID="com.yourname.gamename" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="5" defaultFramerate="60" defaultSceneID="5" desc="" desktopScale="1x" desktopScaleMode="1" deviceOS="4.3" disableBackButton="false" enableGPG="false" enablePurchases="false" engine="0" format="3.2.0" gameid="-1" googleAppID="" haxeExtras="" height="600" internalVersion="1" internalVersionIOS="1" kit="false" lockURL="" macBundleID="" maxScaleAndroid="4x" maxScaleDesktop="4x" maxScaleIOS="4x" maxScaleWeb="4x" metroColor="-12566464" mochi="" multitouch="true" name="Revi" ngID="" ngKey="" orientation="0" p12="" p12pwd="" physicsMode="0" pixelsnap="false" preloaderstyle="0" products="" prov-adhoc="" prov-store="" scale="1" scaleModeAndroid="0" scaleModeDesktop="0" scaleModeIOS="0" scaleModeWeb="0" showAds="false" simulatorOS="4.3" splashStyle="0" startInFullScreenDesktop="false" startInFullScreenWeb="false" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" useGlossyIcon="false" webScale="1x" whirlKey="" width="800" windowsAppName="" windowsAuthor="" windowsBundleID="">
     <exts>
         <e enabled="false" id="test-native"/>
         <e enabled="false" id="test"/>
-        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="label"/>
+        <e enabled="false" id="test-flash"/>
         <e enabled="false" id="tileapi"/>
     </exts>
     <scales>
@@ -76,11 +76,14 @@
     </input>
     <attcats>
         <cat id="0" name="Controller"/>
+        <cat id="1" name="Text"/>
         <cat id="-1" name="Default"/>
     </attcats>
     <props/>
     <attributes>
         <number cid="0" id="1" name="SceneController" save="true" value="0.0"/>
+        <text cid="1" id="3" name="String" save="true" value="noText"/>
+        <bool cid="0" id="4" name="Encantado" save="true" value="false"/>
         <number cid="-1" id="0" name="Scene" save="true" value="0.0"/>
         <number cid="0" id="2" name="Inventory" save="true" value="0.0"/>
     </attributes>
@@ -110,9 +113,11 @@
         <poly id="22" name="Tri 60R Inv" pts="0.5,0.0#1.0,1.0#1.0,0.0"/>
         <poly id="25" name="Tri 60-2L Inv" pts="0.0,0.0#0.0,1.0#0.5,1.0#1.0,0.0"/>
         <poly id="24" name="Tri 60-2R Inv" pts="0.0,0.0#0.5,1.0#1.0,1.0#1.0,0.0"/>
+        <poly id="27" name="TineCornerR" pts="0.79,0.0#0.79,1.0#1.0,1.0#1.0,0.0"/>
+        <poly id="26" name="TineCornerL" pts="0.0,0.0#0.0,1.0#0.21,1.0#0.21,0.0"/>
     </collisions>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,4,5,8,10,11," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,4,5,8,10,11,13,14,15,17,16,19,21,20," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

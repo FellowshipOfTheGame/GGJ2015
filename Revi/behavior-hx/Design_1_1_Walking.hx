@@ -80,9 +80,23 @@ public var _walkU:String;
 
 public var _walkD:String;
 
-public var _idle:String;
-
 public var _isWalking:Bool;
+
+public var _lookingR:Bool;
+
+public var _lookingUp:Bool;
+
+public var _idleR:String;
+
+public var _idleL:String;
+
+public var _idleU:String;
+
+public var _idleD:String;
+
+public var _lookingDown:Bool;
+
+public var _side:Float;
 
  
  	public function new(dummy:Int, actor:Actor, engine:Engine)
@@ -94,10 +108,21 @@ nameMap.set("walkR", "_walkR");
 nameMap.set("walkL", "_walkL");
 nameMap.set("walkU", "_walkU");
 nameMap.set("walkD", "_walkD");
-nameMap.set("idle", "_idle");
 nameMap.set("isWalking", "_isWalking");
 _isWalking = false;
+nameMap.set("lookingR", "_lookingR");
+_lookingR = false;
+nameMap.set("lookingUp", "_lookingUp");
+_lookingUp = false;
+nameMap.set("idleR", "_idleR");
+nameMap.set("idleL", "_idleL");
+nameMap.set("idleU", "_idleU");
+nameMap.set("idleD", "_idleD");
+nameMap.set("lookingDown", "_lookingDown");
+_lookingDown = false;
 nameMap.set("Actor", "actor");
+nameMap.set("side", "_side");
+_side = 0.0;
 
 	}
 	
@@ -109,48 +134,103 @@ addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Vo
 {
 if(wrapper.enabled)
 {
+        /* 0 - up
+1 - right
+2 - down
+3 - left */
         _isWalking = false;
 propertyChanged("_isWalking", _isWalking);
         if(isKeyDown("right"))
 {
             actor.setXVelocity(_speed);
-            actor.setAnimation("" + _walkR);
             _isWalking = true;
 propertyChanged("_isWalking", _isWalking);
+            _side = asNumber(1);
+propertyChanged("_side", _side);
 }
 
         else if(isKeyDown("left"))
 {
             actor.setXVelocity(-(_speed));
-            actor.setAnimation("" + _walkL);
             _isWalking = true;
 propertyChanged("_isWalking", _isWalking);
+            _side = asNumber(3);
+propertyChanged("_side", _side);
 }
 
         else
 {
             actor.setXVelocity(0);
-            actor.setAnimation("" + _idle);
 }
 
         if(isKeyDown("up"))
 {
             actor.setYVelocity(-(_speed));
-            actor.setAnimation("" + _walkU);
+            _isWalking = true;
+propertyChanged("_isWalking", _isWalking);
+            _side = asNumber(0);
+propertyChanged("_side", _side);
 }
 
         else if(isKeyDown("down"))
 {
             actor.setYVelocity(_speed);
-            actor.setAnimation("" + _walkD);
+            _isWalking = true;
+propertyChanged("_isWalking", _isWalking);
+            _side = asNumber(2);
+propertyChanged("_side", _side);
 }
 
         else
 {
             actor.setYVelocity(0);
-            if(!(_isWalking))
+}
+
+        /* "Troca anima~x00e7ao" */
+        if(!(_isWalking))
 {
-                actor.setAnimation("" + _idle);
+            if((_side == 0))
+{
+                actor.setAnimation("" + _idleU);
+}
+
+            else if((_side == 1))
+{
+                actor.setAnimation("" + _idleR);
+}
+
+            else if((_side == 2))
+{
+                actor.setAnimation("" + _idleD);
+}
+
+            else if((_side == 3))
+{
+                actor.setAnimation("" + _idleL);
+}
+
+}
+
+        else
+{
+            if((_side == 0))
+{
+                actor.setAnimation("" + _walkU);
+}
+
+            else if((_side == 1))
+{
+                actor.setAnimation("" + _walkR);
+}
+
+            else if((_side == 2))
+{
+                actor.setAnimation("" + _walkD);
+}
+
+            else if((_side == 3))
+{
+                actor.setAnimation("" + _walkL);
 }
 
 }
